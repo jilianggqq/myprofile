@@ -1,40 +1,32 @@
 {
-    "title": "Qiqiang's MBA Program Portfolio",
-    "name": "qiqiang-guan-mba-portfolio",
-    "version": "7.0.3",
-    "scripts": {
-        "start": "node index.js"
-    },
-    "keywords": [
-        "css",
-        "sass",
-        "html",
-        "responsive",
-        "theme",
-        "template",
-        "admin",
-        "app",
-        "dashboard"
-    ],
-    "repository": {
-        "type": "git",
-        "url": "https://github.com/StartBootstrap/startbootstrap-sb-admin.git"
-    },
-    "dependencies": {
-        "bootstrap": "5.1.0",
-        "ejs": "^3.1.6",
-        "express": "^4.17.1"
-    },
-    "devDependencies": {
-        "autoprefixer": "10.3.1",
-        "browser-sync": "2.27.5",
-        "chokidar": "3.5.2",
-        "concurrently": "6.2.0",
-        "postcss": "8.3.6",
-        "prettier": "2.3.2",
-        "pug": "3.0.2",
-        "sass": "1.37.5",
-        "shelljs": "0.8.4",
-        "upath": "2.0.1"
-    }
+  "name": "node-js-getting-started",
+  "version": "0.3.0",
+  "description": "A sample Node.js app using Express 4",
+  "engines": {
+    "node": "14.x"
+  },
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "test": "node test.js"
+  },
+  "dependencies": {
+    "ejs": "^3.1.5",
+    "bootstrap": "5.1.0",
+    "express": "^4.15.2"
+  },
+  "devDependencies": {
+    "got": "^11.3.0",
+    "tape": "^4.7.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/heroku/node-js-getting-started"
+  },
+  "keywords": [
+    "node",
+    "heroku",
+    "express"
+  ],
+  "license": "MIT"
 }
