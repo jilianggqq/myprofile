@@ -7,8 +7,13 @@ const app = express();
 const path = require("path");
 const router = express.Router();
 
+// app.use(express.static(__dirname + "/public"));
+app.use('/css', express.static('public/css'))
+app.use('/assets', express.static('public/assets'))
+app.use('/js', express.static('public/js'))
+
 // route finalhandler
-app.get("/", (req, res) => {
+app.get("/hello", (req, res) => {
   res.send({
     Hello: "world"
   });
@@ -16,38 +21,50 @@ app.get("/", (req, res) => {
 
 console.log(__dirname);
 
-router.get("/v1/login", function (req, res) {
-  res.sendFile(path.join(__dirname + "/pages/index.html"));
+router.get('/',function(req,res){
+  res.sendFile(path.join(__dirname+'/pages/index.html'));
   //__dirname : It will resolve to your project folder.
 });
 
-router.get("/v1/dashboard", function (req, res) {
-  res.sendFile(path.join(__dirname + "/pages/dashboard.html"));
+router.get('/index',function(req,res){
+  res.sendFile(path.join(__dirname+'/pages/index.html'));
   //__dirname : It will resolve to your project folder.
 });
 
-router.get("/v1/product", function (req, res) {
-  res.sendFile(path.join(__dirname + "/pages/product.html"));
+router.get('/ob',function(req,res){
+  res.sendFile(path.join(__dirname+'/pages/ob.html'));
   //__dirname : It will resolve to your project folder.
 });
 
-router.get("/v1/order", function (req, res) {
-  res.sendFile(path.join(__dirname + "/pages/order.html"));
+router.get('/vsp',function(req,res){
+  res.sendFile(path.join(__dirname+'/pages/vsp.html'));
   //__dirname : It will resolve to your project folder.
 });
 
-router.get("/v1/customer", function (req, res) {
-  res.sendFile(path.join(__dirname + "/pages/customer.html"));
+router.get('/ma',function(req,res){
+  res.sendFile(path.join(__dirname+'/pages/ma.html'));
   //__dirname : It will resolve to your project folder.
 });
 
-// router.get("/about", function (req, res) {
-//   res.sendFile(path.join(__dirname + "/about.html"));
-// });
+router.get('/me',function(req,res){
+  res.sendFile(path.join(__dirname+'/pages/me.html'));
+  //__dirname : It will resolve to your project folder.
+});
 
-// router.get("/sitemap", function (req, res) {
-//   res.sendFile(path.join(__dirname + "/sitemap.html"));
-// });
+router.get('/mis',function(req,res){
+  res.sendFile(path.join(__dirname+'/pages/mis.html'));
+  //__dirname : It will resolve to your project folder.
+});
+
+router.get('/sm',function(req,res){
+  res.sendFile(path.join(__dirname+'/pages/sm.html'));
+  //__dirname : It will resolve to your project folder.
+});
+
+router.get('/mf',function(req,res){
+  res.sendFile(path.join(__dirname+'/pages/mf.html'));
+  //__dirname : It will resolve to your project folder.
+});
 
 //add the router
 app.use("/", router);
@@ -57,8 +74,5 @@ app.use("/", router);
 const PORT = process.env.PORT || 5000;
 
 app.listen(PORT);
-
-// app.use(express.static(__dirname + "/public"));
-app.use('/static', express.static('public'))
 
 console.log("app is running in poat " + PORT);
